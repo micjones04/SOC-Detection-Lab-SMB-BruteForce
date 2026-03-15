@@ -61,7 +61,7 @@ The Windows target logs each authentication failure as:
 ```
 Event ID: 4625
 ```
-
+<img width="742" height="600" alt="Image" src="https://github.com/user-attachments/assets/f7fa8e65-b8e8-4f83-898a-c31b3dcb6172" />
 Important fields observed:
 
 ```
@@ -70,8 +70,11 @@ Account Name: Administrator
 Failure Reason: Unknown user name or bad password
 Source Network Address: 192.168.10.250
 ```
+<img width="626" height="441" alt="Image" src="https://github.com/user-attachments/assets/34416be5-a785-4045-a205-71b7f22576f7" />
 
 This confirms that authentication attempts originated from the Kali attacker machine.
+
+<img width="628" height="441" alt="Image" src="https://github.com/user-attachments/assets/6d2652c4-5994-42ac-920d-fe976d8b9233" />
 
 ---
 
@@ -84,6 +87,7 @@ Initial query:
 ```spl
 index=endpoint EventCode=4625
 ```
+<img width="1903" height="806" alt="Image" src="https://github.com/user-attachments/assets/7e33cd14-7853-4286-875a-3b9fd169db12" />
 
 This search reveals all failed authentication attempts.
 
@@ -98,6 +102,7 @@ index=endpoint EventCode=4625
 | stats count by Source_Network_Address
 | where count > 10
 ```
+<img width="1904" height="838" alt="Image" src="https://github.com/user-attachments/assets/d42d58a4-c812-47fa-8b77-90ac0b448863" />
 
 Detection Result:
 
