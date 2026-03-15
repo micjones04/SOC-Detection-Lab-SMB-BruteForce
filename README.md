@@ -40,7 +40,7 @@ netexec smb 192.168.10.100 -u Administrator -p test.txt
 ```
 ### Attack Execution
 
-![NetExec SMB Brute Force](<netexeccmd.png>)
+![NetExec SMB Brute Force](<netexeccmd/png>)
 
 The tool attempts multiple password guesses against the Administrator account.
 
